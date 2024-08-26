@@ -25,5 +25,8 @@ jobs:
         pytest --cov=myfile
 
     - name: Upload coverage to Codecov
-      run: |
-        codecov
+      uses: codecov/codecov-action@v4
+      with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+
