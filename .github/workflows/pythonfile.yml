@@ -13,13 +13,17 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'  # Replace with the specific version you need
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov
+        pip install pytest pytest-cov codecov
 
     - name: Test with pytest
       run: |
         pytest --cov=myfile
+
+    - name: Upload coverage to Codecov
+      run: |
+        codecov
