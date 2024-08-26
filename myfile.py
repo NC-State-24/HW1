@@ -16,10 +16,10 @@ print ("Our array is: ", numbers)
 sum_ans = sum_list(numbers)
 print("The sum of the array elements are: ", sum_ans)
 
-count = count(numbers)
-print("The number of elements: ", count)
+cnt = count(numbers)
+print("The number of elements: ", cnt)
 
-mean = sum_ans/count
+mean = sum_ans/cnt
 
 print("Mean of the elements in the array is: ", mean)
 
