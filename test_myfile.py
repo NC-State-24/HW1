@@ -6,4 +6,4 @@ def test_sum_list():
 
 def test_count():
     test=[i for i in range(1,10)]
-    assert count(test) == 9  # This should fail (it should be 9)
+    assert count(test) == 10  # This should fail (it should be 9)
