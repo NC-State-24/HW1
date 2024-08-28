@@ -7,19 +7,19 @@ def count(numbers):
     return cnt
 
 
-print("Welcome to our demonstration")
+print("Welcome to our demonstration for HW 1")
 
-numbers = [i for i in range (1,10)] # List Comprehension
+numbers = [i for i in range (1,10)]
 
-print ("Our array is: ", numbers)
+print ("Our array: ", numbers)
 
 sum_ans = sum_list(numbers)
-print("The sum of the array elements are: ", sum_ans)
+print("The sum of the array elements: ", sum_ans)
 
 cnt = count(numbers)
 print("The number of elements: ", cnt)
 
 mean = sum_ans/cnt
 
-print("Mean of the elements in the array is: ", mean)
+print("Mean of the elements in the array: ", mean)
 
