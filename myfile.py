@@ -8,7 +8,8 @@ def count(numbers):
 
 
 print("Welcome to our demonstration for HW 1")
-
+print("-------------------------------------")
+print("Homework 1 for SE CSC 510")
 numbers = [i for i in range (1,10)]
 
 print ("Our array: ", numbers)
