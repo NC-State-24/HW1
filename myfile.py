@@ -7,6 +7,7 @@ def count(numbers):
     return cnt
 
 
+
 print("Welcome to our demonstration for HW 1")
 
 print("Homework 1 for SE CSC 510")
