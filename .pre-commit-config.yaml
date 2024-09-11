@@ -1,6 +1,6 @@
 repos:
     - repo: https://github.com/PyCQA/pylint
-      rev: pylint-3.2.4  # Use the sha / tag you want to point at
+      rev: pylint-v3.2.7  # Use the sha / tag you want to point at
       hooks:
       - id: pylint
         exclude: ^server/
