@@ -11,3 +11,6 @@ repos:
         [
           "-rn", # Only display messages
         ]
+-   repo: local
+    hooks:
+    -   id: autopep8
