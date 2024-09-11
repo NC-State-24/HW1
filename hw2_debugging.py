@@ -5,7 +5,7 @@ def mergeSort(arr):
     if (len(arr) == 1):
         return arr
 
-    half = len(arr)//2
+    half = len(arr) // 2
 
     return recombine(mergeSort(arr[:half]), mergeSort(arr[half:]))
 
