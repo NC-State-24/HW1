@@ -4,7 +4,6 @@ This is python code to generate random array for input to merge sort
 
 import subprocess
 
-
 def random_array(arr):
     """
     This is random function to generate random array for input to merge sort
