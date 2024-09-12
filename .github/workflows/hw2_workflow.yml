@@ -1,6 +1,9 @@
 
 name: Workflow for HW 2
 
+permissions:
+    contents: write
+
 on: 
   push:
     paths:
