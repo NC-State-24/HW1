@@ -1,0 +1,48 @@
+
+name: Workflow for HW 2
+
+on: 
+  push:
+    paths:
+      - 'HW2/**'
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        pip install pytest pyflakes bandit autopep8 radon
+    - name: Run tests
+      run: |
+        pytest HW2/hw2_debugging.py
+    - name: Run AutoPep8 for HW1 and HW2
+      run: |
+        autopep8 --in-place --aggressive --aggressive myfile.py
+        autopep8 --in-place --aggressive --aggressive HW2/hw2_debugging.py > HW2/post_traces/autopep8_hw2_trace.txt || true
+    - name: Run pyflakes for HW2
+      run: |
+        pyflakes HW2/hw2_debugging.py > HW2/post_traces/pyflakes_hw2_trace.txt || true
+    - name: Run bandit for HW2
+      run: |
+        bandit HW2/**/*.py > HW2/post_traces/bandit_hw2_trace.txt || true
+    - name: Run radon for HW2
+      run: |
+        radon HW2/**/*.py > HW2/post_traces/radon_hw2_trace.txt || true
+    - name: Commit results
+      run: |
+          git config --local user.name "GokulPrakashRamesh"
+          git config --local user.email "gokulprakashramesh@gmail.com"
+          git add HW2/post_traces/*
+          git commit -m "updated trace files"
+          git push
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
