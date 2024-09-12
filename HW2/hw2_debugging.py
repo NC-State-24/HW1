@@ -44,3 +44,4 @@ array_test = rand.random_array([0] * 20)
 arr_out = merge_sort(array_test)
 
 print(arr_out)
+
