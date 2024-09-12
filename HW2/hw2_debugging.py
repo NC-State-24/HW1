@@ -1,5 +1,5 @@
 """
-This is python code for merge sort
+This is python code for merge sort.
 """
 
 import rand
