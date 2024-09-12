@@ -25,7 +25,7 @@ jobs:
         pip install pytest pyflakes bandit autopep8 radon
     - name: Run tests
       run: |
-        pytest HW2/hw2_debugging.py
+        pytest HW2/test_merge_sort.py
     - name: Run AutoPep8 for HW1 and HW2
       run: |
         autopep8 --in-place --aggressive --aggressive myfile.py
