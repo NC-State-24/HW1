@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/NC-State-24/HW1/branch/main/graph/badge.svg)](https://codecov.io/gh/NC-State-24/HW1)
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
 # Homework 1
-This repository contains the contents for Homework 1, Software Engineering by Dr. Tim Menzies
+This repository contains the contents for all Homeworks, Software Engineering by Dr. Tim Menzies
 
 
 
