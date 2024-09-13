@@ -28,7 +28,7 @@ jobs:
         pytest HW2/test_merge_sort.py
     - name: Run AutoPep8 for HW2
       run: |
-        autopep8 --in-place --aggressive --aggressive HW2/hw2_debugging.py > HW2/post_traces/autopep8_hw2_trace.txt || true
+        autopep8 --in-place --aggressive --aggressive --verbose HW2/hw2_debugging.py > HW2/post_traces/autopep8_hw2_trace.txt || true
     - name: Run pyflakes for HW2
       run: |
         pyflakes HW2/hw2_debugging.py > HW2/post_traces/pyflakes_hw2_trace.txt || true
