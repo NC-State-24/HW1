@@ -37,11 +37,10 @@ def recombine(left_arr, right_arr):
     for i in range(left_index, len(left_arr)):
         merge_arr[i + right_index] = left_arr[i]
 
-    return merge_arr
+    return merge_arr 
 
 
 array_test = rand.random_array([0] * 20)
 arr_out = merge_sort(array_test)
 
 print(arr_out)
-
