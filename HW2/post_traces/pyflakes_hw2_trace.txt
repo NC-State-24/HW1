@@ -1,3 +1,1 @@
-HW2/hw2_debugging.py:20:35: expected ':'
-def recombine(left_arr, right_arr)
-                                  ^
+No traces from Pyflakes

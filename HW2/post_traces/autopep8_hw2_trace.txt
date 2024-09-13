@@ -1,2 +1,3 @@
 [file:HW2/hw2_debugging.py]
+--->  2 issue(s) to fix {'E501': {22}, 'W291': {40}}
 --->  1 issue(s) to fix {'E501': {22}}
