@@ -1,5 +1,1 @@
-#!/bin/bash
-cat titanic.csv | \
-awk -F, '$3 == 2 && $7 == "S" {print $0}' | \
-sed 's/male/M/g; s/female/F/g' | \
-awk -F, 'BEGIN {sum=0; count=0} {if($6 != "") {sum+=$6; count+=1}} END {if(count>0) print "Average Age: " sum/count}'
+awk -F, 'NR > 1 { print $3, $5, $6, $7, $13 }' titanic.csv | sed 's/"//g' | sed 's/[[:space:]]*$//' | grep "S$" | grep "^2" | rev | awk '{if ($3 == "elamef") $3 = "F"; else if ($3 == "elam") $3 = "M"; else if ($2 == "elamef") $2 = "F"; else if ($2 == "elam") $2 = "M"; print}' | rev | sed 's/ S$//' | awk '{if ($NF ~ /^[0-9]+$/) {sum += $NF; count++}} END {if (count > 0) print sum / count; else print 0}'
